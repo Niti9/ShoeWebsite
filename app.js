@@ -127,6 +127,11 @@ currentProductSizes.forEach((size, index) => {
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
+const closeButton = document.querySelector(".closeButton");
+
+const payButton = document.querySelector(".payButton");
+const successfull = document.querySelector(".successfull");
+const backButton = document.querySelector(".backButton");
 
 productButton.addEventListener("click", () => {
   payment.style.display = "flex";
@@ -134,4 +139,98 @@ productButton.addEventListener("click", () => {
 
 close.addEventListener("click", () => {
   payment.style.display = "none";
+  
+  
 });
+
+
+// payButton.addEventListener("click", () => {
+//   payment.style.display="none";
+//   successfull.style.display = "block";
+  
+// });
+
+closeButton.addEventListener("click", () => {
+  successfull.style.display = "none";
+  
+ 
+});
+
+backButton.addEventListener("click", () => {
+  successfull.style.display = "none";
+  
+ 
+});
+
+
+
+
+function verify(){
+  payment.style.display="none";
+  successfull.style.display = "block";
+}
+
+
+
+
+
+// function myFunction() {
+//   document.getElementById("demo").style.fontSize = "25px"; 
+//   document.getElementById("demo").style.color = "red";
+//   document.getElementById("demo").style.backgroundColor = "yellow";        
+// }
+
+
+// function myFunction() {
+//   var demo = document.getElementById("demo");
+//   if (demo.style.fontSize === "25px") {
+//     demo.style.fontSize = "16px"; // reset to default font size
+//     demo.style.color = "black"; // reset to default color
+//     demo.style.backgroundColor = "transparent"; // reset to default background color
+//   } else {
+//     demo.style.fontSize = "25px";
+//     demo.style.color = "red";
+//     demo.style.backgroundColor = "yellow";
+//   }
+// }
+
+
+
+
+
+function myFunction() {
+  var nameInput = document.getElementById("name");
+  var phoneInput = document.getElementById("phone");
+  var emailInput = document.getElementById("email");
+  var sizeInput = document.getElementById("size");
+  var shoeNameInput = document.getElementById("shoeName");
+
+  console.log("hello boss")
+
+  if (nameInput && phoneInput && emailInput && sizeInput && shoeNameInput) {
+    var name = nameInput.value;
+    var phone = phoneInput.value;
+    var email = emailInput.value;
+    var size = sizeInput.value;
+    var shoeName = shoeNameInput.value;
+
+    if (name && phone && email && size && shoeName) {
+      // All fields are filled, allow the button to be clicked
+      // You can add your checkout logic here
+      alert("Checkout successful!");
+
+      //calling verify function
+      verify();
+    } else {
+      // One or more fields are empty, prevent the button from being clicked
+      alert("Please fill in all the required fields!");
+      event.preventDefault();
+    }
+  } else {
+    console.error("One or more input fields do not exist in the DOM.");
+  }
+}
+
+
+
+

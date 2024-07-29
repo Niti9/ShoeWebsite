@@ -127,28 +127,35 @@
             </div>
             <button class="productButton">BUY NOW!</button>
         </div>
-        <div class="payment">
-            <h1 class="payTitle">Personal Information</h1>
-            <label>Name and Surname</label>
-            <input type="text" placeholder="John Doe" class="payInput">
-            <label>Phone Number</label>
-            <input type="text" placeholder="+1 234 5678" class="payInput">
-            <label>Address</label>
-            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
-            <h1 class="payTitle">Card Information</h1>
-            <div class="cardIcons">
-                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
-                <img src="./img/master.png" alt="" width="40" class="cardIcon">
-            </div>
-            <input type="password" class="payInput" placeholder="Card Number">
-            <div class="cardInfo">
-                <input type="text" placeholder="mm" class="payInput sm">
-                <input type="text" placeholder="yyyy" class="payInput sm">
-                <input type="text" placeholder="cvv" class="payInput sm">
-            </div>
-            <button class="payButton">Checkout!</button>
+        <div class="payment" id="demo" >
+            <h1 class="payTitle" >Personal Information</h1>
+            <label style="font-size: large; font-weight: 700;" >Name </label>
+            <input id="name" type="text" placeholder="Name" class="payInput" required>
+            <label style="font-size: large; font-weight: 700;">Phone Number</label>
+            <input id="phone" type="text" placeholder="+91" class="payInput" required>
+            <label style="font-size: large; font-weight: 700;">Email Id</label>
+            <input id="email" type="email" placeholder="Email id" class="payInput" required>
+            <label  style="font-size: large; font-weight: 700;">Size</label>
+            <input id="size" type="text" placeholder="Shoe Size " class="payInput" required>
+            <label style="font-size: large; font-weight: 700;">Shoe Name</label>
+            <input id="shoeName" type="text" placeholder="Shoe Name" class="payInput" required>
+           
+            <button onclick="myFunction()" class="payButton" id="checkoutButton">Checkout!</button>
             <span class="close">X</span>
         </div>
+
+
+        <!-- code for successfull page -->
+        <div class="successfull" id="shown" >
+            <div >
+                <h1 class="">Successfully Done </h1>
+                <h3 class="backButton" >go and check your email</h3>   
+            </div>           
+            <span class="closeButton">X</span> 
+          </div>
+        
+
+        <!--  -->
     </div>
     <div class="gallery">
         <div class="galleryItem">
@@ -189,43 +196,45 @@
         <div class="footerLeft">
             <div class="footerMenu">
                 <h1 class="fMenuTitle">About Us</h1>
+                <a href="#nav" style="text-decoration:none">
+
                 <ul class="fList">
                     <li class="fListItem">Company</li>
                     <li class="fListItem">Contact</li>
-                    <li class="fListItem">Careers</li>
+                    <!-- <li class="fListItem">Careers</li>
                     <li class="fListItem">Affiliates</li>
-                    <li class="fListItem">Stores</li>
+                    <li class="fListItem">Stores</li> -->
                 </ul>
+                </a>
             </div>
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Useful Links</h1>
+                <a href="#nav" style="text-decoration:none">
+
                 <ul class="fList">
                     <li class="fListItem">Support</li>
-                    <li class="fListItem">Refund</li>
+                    <!-- <li class="fListItem">Refund</li> -->
                     <li class="fListItem">FAQ</li>
-                    <li class="fListItem">Feedback</li>
-                    <li class="fListItem">Stories</li>
+                    <!-- <li class="fListItem">Feedback</li> -->
+                    <!-- <li class="fListItem">Stories</li> -->
                 </ul>
+                </a>
             </div>
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Products</h1>
+                <a href="#nav" style="text-decoration:none">
                 <ul class="fList">
                     <li class="fListItem">Air Force</li>
-                    <li class="fListItem">Air Jordan</li>
+                    <li class="fListItem">Jordan</li>
                     <li class="fListItem">Blazer</li>
                     <li class="fListItem">Crater</li>
                     <li class="fListItem">Hippie</li>
                 </ul>
+                </a>
             </div>
         </div>
         <div class="footerRight">
-            <div class="footerRightMenu">
-                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
-                <div class="fMail">
-                    <input type="text" placeholder="your@email.com" class="fInput">
-                    <button class="fButton">Join!</button>
-                </div>
-            </div>
+            
             <div class="footerRightMenu">
                 <h1 class="fMenuTitle">Follow Us</h1>
                 <div class="fIcons">
@@ -236,7 +245,7 @@
                 </div>
             </div>
             <div class="footerRightMenu">
-                <span class="copyright">@Lama Dev. All rights reserved. 2022.</span>
+                <span class="copyright">@Gokul Rawat. All rights reserved. 2022.</span>
             </div>
         </div>
     </footer>
